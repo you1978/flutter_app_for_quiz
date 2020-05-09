@@ -62,7 +62,6 @@ class _ChangeFormState extends State<ChangeForm>{
             style: TextStyle(color:Colors.red),
             obscureText: false,
             maxLines:1,
-            // パスワード
             onChanged:_handleText,
           ), 
         ],

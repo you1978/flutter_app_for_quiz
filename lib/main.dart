@@ -62,6 +62,11 @@ class _ChangeFormState extends State<ChangeForm>{
             style: TextStyle(color:Colors.red),
             obscureText: false,
             maxLines:1,
+            decoration:const InputDecoration( 
+              icon: Icon(Icons.input),
+              hintText:'何かテキストを入れてください',
+              labelText: "テキスト入力*"
+            ),
             onChanged:_handleText,
           ), 
         ],

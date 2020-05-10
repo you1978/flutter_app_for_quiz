@@ -6,11 +6,11 @@ class MyApp extends StatelessWidget {
   @override 
   Widget build(BuildContext context){
     return MaterialApp(
-      title: 'フォーム',
+      title: 'Flutter講座初級編',
       home: Scaffold( 
         appBar: AppBar(
           title: Text(
-            'フォーム',
+            'Flutter講座初級編',
             style: TextStyle(
               fontSize: 20.0,
               fontWeight: FontWeight.bold,
@@ -18,59 +18,10 @@ class MyApp extends StatelessWidget {
             ),
             ),
           centerTitle: true,
+          backgroundColor: Colors.red,
         ),
-        body: Center( 
-          child: ChangeForm(),
-          ),
+        body: Container(),
         ),
       );
-  }
-}
-
-class ChangeForm extends StatefulWidget {
-  @override 
-  _ChangeFormState createState() => _ChangeFormState();
-}
-
-class _ChangeFormState extends State<ChangeForm>{
-
-  String _text = '';
-
-  void _handleText(String e){
-    setState((){
-      _text = e;
-    });
-  }
-
-  Widget build(BuildContext context){
-    return Container(
-      padding: const EdgeInsets.all(50.0),
-      child: Column(
-        children: <Widget>[
-          Text(
-            "$_text",
-            style: TextStyle(
-              color: Colors.blueAccent,
-              fontSize: 30.0,
-              fontWeight: FontWeight.w500
-            ),
-          ),
-          new TextField( 
-            enabled: true,
-            maxLength: 10,
-            maxLengthEnforced: false,
-            style: TextStyle(color:Colors.red),
-            obscureText: false,
-            maxLines:1,
-            decoration:const InputDecoration( 
-              icon: Icon(Icons.input),
-              hintText:'何かテキストを入れてください',
-              labelText: "テキスト入力*"
-            ),
-            onChanged:_handleText,
-          ), 
-        ],
-      ),
-    );
   }
 }

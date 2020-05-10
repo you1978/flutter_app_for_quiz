@@ -6,11 +6,11 @@ class MyApp extends StatelessWidget {
   @override 
   Widget build(BuildContext context){
     return MaterialApp(
-      title: 'Flutter講座初級編',
+      title: 'Flutterチュートリアル初級編',
       home: Scaffold( 
         appBar: AppBar(
           title: Text(
-            'Flutter講座初級編',
+            'Flutterチュートリアル初級編',
             style: TextStyle(
               fontSize: 20.0,
               fontWeight: FontWeight.bold,

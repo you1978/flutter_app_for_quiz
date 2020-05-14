@@ -20,7 +20,11 @@ class MyApp extends StatelessWidget {
           centerTitle: true,
           backgroundColor: Colors.red,
         ),
-        body: Container(),
+        body: Container(
+          padding: EdgeInsets.all(20.0),
+          color: Colors.blue,
+          child: Text('Hello'),
+        ),
         ),
       );
   }

@@ -20,12 +20,25 @@ class MyApp extends StatelessWidget {
           centerTitle: true,
           backgroundColor: Colors.red,
         ),
-        body: Container(
-          padding: EdgeInsets.fromLTRB(10.0 , 20.0 , 30.0 , 40.0),
-          margin: EdgeInsets.all(30.0),
-          color: Colors.blue,
-          child: Text('Hello'),
-        ),
+        body: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          children: <Widget>[
+          Container (
+            color: Colors.blue,
+            padding: EdgeInsets.all(30.0),
+            child: Text('青'),
+          ),
+          Container (
+            color: Colors.red,
+            padding: EdgeInsets.all(30.0),
+            child: Text('赤'),
+          ),
+          Container (
+            color: Colors.yellow,
+            padding: EdgeInsets.all(30.0),
+            child: Text('黄色'),
+          )
+        ],)
         ),
       );
   }

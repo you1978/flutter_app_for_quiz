@@ -20,12 +20,12 @@ class MyApp extends StatelessWidget {
           centerTitle: true,
           backgroundColor: Colors.red,
         ),
-        body: Row(
+        body: Column(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: <Widget>[
           Container (
             color: Colors.blue,
-            padding: EdgeInsets.all(30.0),
+            padding: EdgeInsets.all(20.0),
             child: Text('青'),
           ),
           Container (
@@ -35,7 +35,7 @@ class MyApp extends StatelessWidget {
           ),
           Container (
             color: Colors.yellow,
-            padding: EdgeInsets.all(30.0),
+            padding: EdgeInsets.all(40.0),
             child: Text('黄色'),
           )
         ],)

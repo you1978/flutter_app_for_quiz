@@ -12,6 +12,15 @@ class MyApp extends StatelessWidget {
   }
 }
 
+class FutureCreator {
+
+  final _myFuture = Future.delayed(
+      Duration(seconds: 5),
+      () => "起動しました！");
+
+  Future<String> get future => _myFuture;
+}
+
 class MyHomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -29,7 +38,16 @@ class MyHomePage extends StatelessWidget {
           backgroundColor: Colors.red,
         ),
         body: Center(
-          child: Text("body")
+          child: FutureBuilder( 
+            future: FutureCreator().future,
+            builder: (context, snapshot){
+              if( snapshot.hasData ){
+                return Text(snapshot.data);
+              }else{
+                return Text("起動中");
+              }
+            },
+          )
         )
     );
   }
